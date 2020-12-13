@@ -2,7 +2,11 @@ package ua.edu.ucu.stream;
 
 
 import lombok.Getter;
-import ua.edu.ucu.function.*;
+import ua.edu.ucu.function.IntBinaryOperator;
+import ua.edu.ucu.function.IntConsumer;
+import ua.edu.ucu.function.IntPredicate;
+import ua.edu.ucu.function.IntToIntStreamFunction;
+import ua.edu.ucu.function.IntUnaryOperator;
 
 import java.util.ArrayList;
 
@@ -33,7 +37,7 @@ public class AsIntStream implements IntStream {
         int counter = 0;
         int sum = 0;
         for (int value : valuesContainer) {
-            sum+= value;
+            sum += value;
             counter++;
         }
         average = (double) sum / counter;
